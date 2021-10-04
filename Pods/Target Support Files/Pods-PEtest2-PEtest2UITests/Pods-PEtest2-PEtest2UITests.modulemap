@@ -1,0 +1,6 @@
+framework module Pods_PEtest2_PEtest2UITests {
+  umbrella header "Pods-PEtest2-PEtest2UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
