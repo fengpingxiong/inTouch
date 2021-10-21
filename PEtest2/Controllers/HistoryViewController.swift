@@ -15,9 +15,7 @@ class HistoryViewController: UIViewController {
     var blemanager = BleManager()
     public var userName: String = ""
     public var userProfile = UIImage(named: "Image")
-//    var messageContent = ""
     var currentMessageContent = ""
-    private var name: String = ""
     private var messageContentArray = [String]()
     
     @IBOutlet weak var profilePicture: UIImageView!
@@ -76,11 +74,6 @@ class HistoryViewController: UIViewController {
     }
     
     
-//    func dismissSelf() {
-//        dismiss(animated:false, completion: nil)
-//    }
-    
-    
     func loadHistory() {
         db.collection("messageSend")
             .order(by:"DateTime")
@@ -100,19 +93,19 @@ class HistoryViewController: UIViewController {
                         let safeReceiverEmail = DatabaseManager.safeEmail(emailAddress: authEmail ?? "0@gmail.com")
                         let timeData = data["DateTime"] as? String
                         let messageContent = data["messageContent"] as? String ?? ""
+                        let emotion = data["Emotion"] as? String ?? ""
                         
                         DispatchQueue.main.async {
                             
                             if findSenderEmail == authEmail {
-                                let tableViewSentText = History(historyType: "You sent to \(receiverName ?? "0@gmail.com") an inTouch", historyTime: timeData ?? "0")
+                                let tableViewSentText = History(historyEmotion: "You sent to ", historyType: "\(receiverName ?? "0@gmail.com") \(emotion)", historyTime: timeData ?? "0")
                                 self.historyText.append(tableViewSentText)
                                 self.messageContentArray.append("0")
                             }
                             if findReceiverEmail == safeReceiverEmail {
-                                let tableViewReceiveText = History(historyType: "You received an inTouch from \(userName ?? "")", historyTime: timeData ?? "0")
+                                let tableViewReceiveText = History(historyEmotion: "You received ", historyType: "\(emotion) from \(userName ?? "")", historyTime: timeData ?? "0")
                                 self.historyText.append(tableViewReceiveText)
                                 self.messageContentArray.append(messageContent)
-                                self.name = userName ?? ""
                                 
                                 
                             }
@@ -156,17 +149,15 @@ class HistoryViewController: UIViewController {
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print("run2")
         return historyText.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        print("run1")
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
         let itemColors = UIColor.orange
-        let HistoryText = historyText[indexPath.row].historyType
-        cell.textLabel?.text = HistoryText + " " + historyText[indexPath.row].historyTime
-        if HistoryText == "You received an inTouch from \(name)" {
+        let HistoryText = historyText[indexPath.row].historyEmotion
+        cell.textLabel?.text = HistoryText + historyText[indexPath.row].historyType + " " + historyText[indexPath.row].historyTime
+        if HistoryText == "You received " {
             cell.textLabel?.textColor = itemColors
         } else {
             cell.isUserInteractionEnabled = false
@@ -177,33 +168,16 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        print("run")
-        let HistoryText = historyText[indexPath.row].historyType
-//        print("history")
-        let PurpleColor = UIColor(red: 229, green: 226, blue: 246, alpha: 1)
-        if HistoryText == "You received an inTouch from \(name)" {
-//            print("text")
-            tableView.backgroundView?.backgroundColor = PurpleColor
-//            print("can pressed")
+        let HistoryText = historyText[indexPath.row].historyEmotion
+//        let PurpleColor = UIColor(red: 229, green: 226, blue: 246, alpha: 1)
+        if HistoryText == "You received " {
+//            tableView.backgroundView?.backgroundColor = PurpleColor
             let rowNumber : Int = indexPath.row
             currentMessageContent  = "\(messageContentArray[rowNumber])"
             print(messageContentArray)
             callDevice((Any).self)
-//            print("can pressed")
         }
-//        dismissSelf()
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let targetUserData = results[indexPath.row]
-//        print("selected")
-//
-//        completion?(targetUserData)
-//        searchResultTable.isHidden = true
-//
-//        addFriends(result: targetUserData)
-//
-//    }
     
 }
 

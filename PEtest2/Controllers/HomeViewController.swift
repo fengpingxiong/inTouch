@@ -59,6 +59,8 @@ class HomeViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var logout: UIBarButtonItem!
     @IBOutlet weak var searchResultTable: UITableView!
+    @IBOutlet weak var historyButton: UIView!
+    @IBOutlet weak var DeviceButton: UIView!
     
     let db = Firestore.firestore()
     
@@ -67,9 +69,11 @@ class HomeViewController: UIViewController,UITextFieldDelegate {
         
 //        title = "Homepage"
         
-        navigationItem.hidesBackButton = true
+//        navigationItem.hidesBackButton = true
         
         logout.title = "Logout"
+//        leftButton.imageEdgeInsets = UIEdgeInsetsMake(-2, 0, 0, 0);
+        
 //        searchFriends.placeholder.color
         
         searchResultTable.isHidden = true
@@ -77,6 +81,8 @@ class HomeViewController: UIViewController,UITextFieldDelegate {
         searchFriends.delegate = self
         searchResultTable.delegate = self
         searchResultTable.dataSource = self
+        historyButton.isHidden = true
+        DeviceButton.isHidden = true
         
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = profileImage.frame.width/2.0
@@ -314,7 +320,11 @@ class HomeViewController: UIViewController,UITextFieldDelegate {
         guard let name = friendName7.text else { return }
         goToFriend(name: name, email: friends[7].email, userName: userName1)
     }
-
+    
+    @IBAction func goToHistoryTap(_ sender: UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "goToHistory", sender: self)
+    }
+    
     func goToFriend(name: String, email: String, userName:String) {
 //        guard let name = result ["name"], let email = result ["email"] else {
 //            return

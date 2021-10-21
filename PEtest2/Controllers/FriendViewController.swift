@@ -13,6 +13,7 @@ class FriendViewController: UIViewController{
     
     public var otherUserEmail: String = ""
     public var messageContent: String = ""
+    public var Emotion: String = ""
     public var otherUserName: String = ""
     public var userName1: String = ""
     private var count: Int = 0
@@ -224,16 +225,33 @@ class FriendViewController: UIViewController{
     
     @IBAction func HappyEmoji(_ sender: UIButton) {
         messageContent = "55"
+        Emotion = "Happy"
     }
     @IBAction func CalmEmoji(_ sender: UIButton) {
         messageContent = "66"
+        Emotion = "Calm"
     }
     @IBAction func SadEmoji(_ sender: UIButton) {
         messageContent = "77"
+        Emotion = "Sad"
     }
-    @IBAction func AngerEmoji(_ sender: UIButton) {
+    @IBAction func excitement(_ sender: UIButton) {
         messageContent = "44"
+        Emotion = "Excited"
+    } 
+    @IBAction func AngerEmoji(_ sender: UIButton) {
+        messageContent = "88"
+        Emotion = "Angry"
     }
+    @IBAction func Birthday(_ sender: UIButton) {
+        messageContent = "99"
+        Emotion = "HBDTY"
+    }
+    @IBAction func Yearning(_ sender: UIButton) {
+        messageContent = "00"
+        Emotion = "Heart"
+    }
+    
     
     @IBAction func yellowButton(_ sender: UIButton) {
         if count > 5 {
@@ -310,6 +328,7 @@ class FriendViewController: UIViewController{
                 db.collection("messageSend").addDocument(data: ["receiverEmail":otherUserEmail,
                      "senderEmail":NameEmail,
                      "messageContent":messageContent,
+                     "Emotion" : Emotion,
                      "receiverName": otherUserName,
                      "userName": userName1,
                      "DateTime":dateString]) { (error) in

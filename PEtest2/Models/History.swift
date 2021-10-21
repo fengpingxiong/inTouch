@@ -7,6 +7,8 @@
 
 import Foundation
 struct History {
+    let historyEmotion: String
     let historyType: String
     let historyTime: String
 }
+
