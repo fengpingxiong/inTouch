@@ -132,17 +132,17 @@
                                     <outletCollection property="gestureRecognizers" destination="bgX-Xt-eZ9" appends="YES" id="XLQ-M7-2HN"/>
                                 </connections>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baP-B3-elq">
-                                <rect key="frame" x="30" y="44" width="194" height="86"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="24" sectionFooterHeight="24" translatesAutoresizingMaskIntoConstraints="NO" id="baP-B3-elq">
+                                <rect key="frame" x="30" y="44" width="194" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.842921806" green="0.84261431220000005" blue="0.91493214320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReusableCellHome" id="osK-Pv-L4L">
-                                        <rect key="frame" x="0.0" y="24.5" width="194" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReusableCellHome" rowHeight="35" id="osK-Pv-L4L">
+                                        <rect key="frame" x="0.0" y="24.5" width="194" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="osK-Pv-L4L" id="bKm-ws-opW">
-                                            <rect key="frame" x="0.0" y="0.0" width="194" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -221,11 +221,11 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-fP-OdW" userLabel="profileImageAreaView">
-                                <rect key="frame" x="8" y="169" width="358" height="370"/>
+                                <rect key="frame" x="8" y="139" width="358" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s8K-fR-wDO" userLabel="friendView1">
-                                        <rect key="frame" x="58" y="38" width="72" height="93"/>
+                                        <rect key="frame" x="58" y="52" width="72" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="77Z-Nb-lRW">
@@ -250,7 +250,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-lY-C9R" userLabel="friendView2">
-                                        <rect key="frame" x="138" y="-4" width="88" height="88"/>
+                                        <rect key="frame" x="138" y="10" width="88" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="friendsprofile" translatesAutoresizingMaskIntoConstraints="NO" id="dO6-N5-oRU">
@@ -275,7 +275,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1U-18-bSX" userLabel="friendView3">
-                                        <rect key="frame" x="232" y="38" width="72" height="93"/>
+                                        <rect key="frame" x="232" y="52" width="72" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="ksH-Dt-1un">
@@ -300,7 +300,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNy-FF-a1m" userLabel="friendView4">
-                                        <rect key="frame" x="266" y="129" width="72" height="93"/>
+                                        <rect key="frame" x="266" y="143" width="72" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="0zM-mo-Epb">
@@ -325,7 +325,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-7P-9V9" userLabel="friendView5">
-                                        <rect key="frame" x="231" y="221" width="72" height="93"/>
+                                        <rect key="frame" x="231" y="235" width="72" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="SNz-ov-tly">
@@ -350,7 +350,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Sx-QB-xeI" userLabel="friendView6">
-                                        <rect key="frame" x="145" y="263" width="72" height="93"/>
+                                        <rect key="frame" x="145" y="277" width="72" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="7Bu-tv-qyK">
@@ -375,7 +375,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJz-vd-6px" userLabel="friendView7">
-                                        <rect key="frame" x="58" y="221" width="72" height="93"/>
+                                        <rect key="frame" x="58" y="235" width="72" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-wg-7PN">
@@ -400,7 +400,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wi1-gO-2lO" userLabel="friendView0">
-                                        <rect key="frame" x="20" y="129" width="72" height="93"/>
+                                        <rect key="frame" x="20" y="143" width="72" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="SqD-nq-jEj">
@@ -426,25 +426,25 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7B0-bB-dLe" userLabel="userProfileView">
-                                        <rect key="frame" x="122" y="112" width="115" height="126"/>
+                                        <rect key="frame" x="122" y="126" width="115" height="126"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-NM-Grl" userLabel="profilesView">
                                                 <rect key="frame" x="2" y="0.0" width="110" height="96"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="8ju-Hk-XLf">
-                                                        <rect key="frame" x="12" y="5" width="86" height="86"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OPv-Vo-9vr">
-                                                        <rect key="frame" x="14" y="7" width="82" height="82"/>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OPv-Vo-9vr">
+                                                        <rect key="frame" x="12" y="5.5" width="86" height="85"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" red="0.8986654878" green="0.88514262440000002" blue="0.96471613649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <gestureRecognizers/>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="8YA-es-vc4" appends="YES" id="r37-AJ-MPa"/>
                                                         </connections>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="8ju-Hk-XLf">
+                                                        <rect key="frame" x="10" y="3" width="90" height="90"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -914,11 +914,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="welcome-background" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-rr-vMd">
-                                <rect key="frame" x="0.0" y="21" width="375" height="646"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="friend-barimage" translatesAutoresizingMaskIntoConstraints="NO" id="c72-ru-Xw2">
-                                <rect key="frame" x="0.0" y="21" width="375" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" fixedFrame="YES" image="friend-intersection" translatesAutoresizingMaskIntoConstraints="NO" id="v5a-rK-a91">
                                 <rect key="frame" x="1" y="487" width="374" height="202"/>
@@ -1005,78 +1001,104 @@
                                         <rect key="frame" x="210" y="135" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kC7-kT-rLF">
+                                <rect key="frame" x="39" y="409" width="298" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAH-ya-PsZ">
-                                        <rect key="frame" x="20" y="-7" width="50" height="50"/>
+                                        <rect key="frame" x="20" y="20" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="Heart"/>
                                         <connections>
                                             <action selector="Yearning:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="ofe-0w-sEf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-LX-tJv">
+                                        <rect key="frame" x="58" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="HappyEmoji"/>
+                                        <connections>
+                                            <action selector="HappyEmoji:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="lEP-hH-6O8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55S-fw-Gx2">
+                                        <rect key="frame" x="96" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="calmEmoji"/>
+                                        <connections>
+                                            <action selector="CalmEmoji:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="xSo-ns-VHv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ct-AA-lFE">
+                                        <rect key="frame" x="134" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Excitement"/>
+                                        <connections>
+                                            <action selector="excitement:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="OzV-AJ-aNO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bow-Vq-9vN">
+                                        <rect key="frame" x="172" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Birthday"/>
+                                        <connections>
+                                            <action selector="Birthday:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="kEa-66-ypY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgO-1g-Qda">
+                                        <rect key="frame" x="210" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="sadEmoji"/>
+                                        <connections>
+                                            <action selector="SadEmoji:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="mqC-4x-US9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zya-eI-UK2">
+                                        <rect key="frame" x="248" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="angerEmoji"/>
+                                        <connections>
+                                            <action selector="AngerEmoji:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="uOd-tr-gWk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-LX-tJv">
-                                <rect key="frame" x="16" y="429" width="50" height="50"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mt0-i6-2Zx">
+                                <rect key="frame" x="83" y="89" width="209" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="HappyEmoji"/>
-                                <connections>
-                                    <action selector="HappyEmoji:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="lEP-hH-6O8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55S-fw-Gx2">
-                                <rect key="frame" x="74" y="429" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="calmEmoji"/>
-                                <connections>
-                                    <action selector="CalmEmoji:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="xSo-ns-VHv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgO-1g-Qda">
-                                <rect key="frame" x="132" y="429" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="sadEmoji"/>
-                                <connections>
-                                    <action selector="SadEmoji:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="mqC-4x-US9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zya-eI-UK2">
-                                <rect key="frame" x="247" y="429" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="angerEmoji"/>
-                                <connections>
-                                    <action selector="AngerEmoji:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="uOd-tr-gWk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ct-AA-lFE">
-                                <rect key="frame" x="189" y="429" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Excitement"/>
-                                <connections>
-                                    <action selector="excitement:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="OzV-AJ-aNO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bow-Vq-9vN">
-                                <rect key="frame" x="305" y="429" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Birthday"/>
-                                <connections>
-                                    <action selector="Birthday:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="kEa-66-ypY"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="history-halo" translatesAutoresizingMaskIntoConstraints="NO" id="MdK-a5-r82">
+                                        <rect key="frame" x="-20" y="-20" width="249" height="249"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="history-profile" translatesAutoresizingMaskIntoConstraints="NO" id="4xd-69-zQq">
+                                        <rect key="frame" x="7" y="3" width="195" height="195"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="home-whitecircle" translatesAutoresizingMaskIntoConstraints="NO" id="iiA-2r-giU">
+                                        <rect key="frame" x="4" y="0.0" width="201" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2e0-Qz-6Iu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UjS-rr-vMd" firstAttribute="bottom" secondItem="2e0-Qz-6Iu" secondAttribute="bottom" id="5uH-wC-mAy"/>
                             <constraint firstItem="UjS-rr-vMd" firstAttribute="trailing" secondItem="2e0-Qz-6Iu" secondAttribute="trailing" id="RMH-X2-tPs"/>
-                            <constraint firstItem="UjS-rr-vMd" firstAttribute="top" secondItem="d20-GJ-Li7" secondAttribute="top" constant="21" id="gul-At-MfQ"/>
+                            <constraint firstItem="UjS-rr-vMd" firstAttribute="top" secondItem="d20-GJ-Li7" secondAttribute="top" id="gul-At-MfQ"/>
                             <constraint firstItem="UjS-rr-vMd" firstAttribute="leading" secondItem="2e0-Qz-6Iu" secondAttribute="leading" id="jZ5-yw-oQW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l9e-z0-Kji"/>
                     <connections>
-                        <outlet property="friendBackGroundImage" destination="UjS-rr-vMd" id="MPr-ma-2SE"/>
+                        <outlet property="friendBackGroundImage" destination="4xd-69-zQq" id="9CB-cK-rnw"/>
                         <outlet property="purpleButton" destination="sX4-c2-lzy" id="BAr-8y-c09"/>
                         <outlet property="redButton" destination="IfD-4V-dNJ" id="Tjg-Tb-2Rf"/>
                         <outlet property="tone1" destination="7Eu-so-jFF" id="Yaz-DC-htP"/>
@@ -1155,8 +1177,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnY-N3-Oly">
+                                <rect key="frame" x="118" y="84" width="140" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSg-8c-ySm">
-                                <rect key="frame" x="173" y="50" width="30" height="30"/>
+                                <rect key="frame" x="170" y="47" width="35" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.94509803920000002" green="0.61960784310000006" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" backgroundImage="externaldrive.fill" catalog="system">
@@ -1166,13 +1195,6 @@
                                     <action selector="DeviceButton:" destination="pfQ-1s-Syz" eventType="touchUpInside" id="ua0-MV-ndQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnY-N3-Oly">
-                                <rect key="frame" x="118" y="84" width="140" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I0b-Kz-v2m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1446,7 +1468,6 @@
         <image name="clear.fill" catalog="system" width="128" height="114"/>
         <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
         <image name="externaldrive.fill" catalog="system" width="128" height="87"/>
-        <image name="friend-barimage" width="375" height="48"/>
         <image name="friend-inTouch" width="216" height="215"/>
         <image name="friend-intersection" width="373.5" height="202"/>
         <image name="friendsprofile" width="72" height="72"/>
@@ -1463,8 +1484,8 @@
         <image name="login-login" width="100" height="45"/>
         <image name="login-signup" width="86" height="25"/>
         <image name="login-typebox" width="217" height="45"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="sadEmoji" width="364" height="360"/>
         <image name="signup-signup" width="122" height="45"/>
         <image name="star-mid" width="87" height="87"/>

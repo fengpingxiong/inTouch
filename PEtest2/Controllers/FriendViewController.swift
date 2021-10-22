@@ -31,6 +31,7 @@ class FriendViewController: UIViewController{
     
     let db = Firestore.firestore()
     
+   
     @IBOutlet weak var friendBackGroundImage: UIImageView!
     @IBOutlet weak var tone1: UIImageView!
     @IBOutlet weak var tone2: UIImageView!
@@ -47,6 +48,8 @@ class FriendViewController: UIViewController{
         super.viewDidLoad()
         title = otherUserName
         friendBackGroundImage = uploadProfileImage()
+        friendBackGroundImage.layer.masksToBounds = true
+        friendBackGroundImage.layer.cornerRadius = friendBackGroundImage.frame.width/2.0
 //        vibrationChioces.isHidden = true
 //        vibrationChiocesRed.isHidden = true
 //        vibrationChiocesPurple.isHidden = true
