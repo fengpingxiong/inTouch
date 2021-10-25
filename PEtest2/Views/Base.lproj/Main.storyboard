@@ -1153,48 +1153,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="history-halo" translatesAutoresizingMaskIntoConstraints="NO" id="bZs-79-bwF">
-                                <rect key="frame" x="99" y="90" width="176" height="176"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMK-Ao-tng">
+                                <rect key="frame" x="95" y="91" width="186" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="history-halo" translatesAutoresizingMaskIntoConstraints="NO" id="Xyb-rk-5P9">
-                                <rect key="frame" x="93.5" y="84" width="189" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="history-profile" translatesAutoresizingMaskIntoConstraints="NO" id="arp-bb-RpO">
-                                <rect key="frame" x="120" y="107" width="135" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="historyanddeviceBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Qln-pz-jFp">
-                                <rect key="frame" x="161" y="34" width="54" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="0yL-7D-ZHX">
-                                <rect key="frame" x="157" y="262" width="61" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnY-N3-Oly">
-                                <rect key="frame" x="118" y="84" width="140" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSg-8c-ySm">
-                                <rect key="frame" x="170" y="47" width="35" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.94509803920000002" green="0.61960784310000006" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="externaldrive.fill" catalog="system">
-                                    <color key="titleShadowColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <state key="normal" backgroundImage="button background">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="DeviceButton:" destination="pfQ-1s-Syz" eventType="touchUpInside" id="ua0-MV-ndQ"/>
+                                    <action selector="DeviceButton:" destination="pfQ-1s-Syz" eventType="touchUpInside" id="EEN-yc-erE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnY-N3-Oly">
+                                <rect key="frame" x="152" y="157" width="72" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I0b-Kz-v2m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1209,8 +1185,6 @@
                     <navigationItem key="navigationItem" id="nOd-BZ-I0H"/>
                     <connections>
                         <outlet property="DeviceLabel" destination="vnY-N3-Oly" id="ct5-M2-8Gu"/>
-                        <outlet property="UserName" destination="0yL-7D-ZHX" id="4L3-We-1Tq"/>
-                        <outlet property="profilePicture" destination="arp-bb-RpO" id="lcz-VA-b2K"/>
                         <outlet property="tableView" destination="0Kc-hK-Fg1" id="kfL-E5-qrO"/>
                     </connections>
                 </viewController>
@@ -1464,6 +1438,7 @@
         <image name="MarkCheck" width="45" height="48"/>
         <image name="angerEmoji" width="356" height="362"/>
         <image name="box" width="21" height="21"/>
+        <image name="button background" width="188.5" height="188.5"/>
         <image name="calmEmoji" width="356" height="354"/>
         <image name="clear.fill" catalog="system" width="128" height="114"/>
         <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>

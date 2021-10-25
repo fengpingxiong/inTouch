@@ -18,9 +18,7 @@ class HistoryViewController: UIViewController {
     var currentMessageContent = ""
     private var messageContentArray = [String]()
     
-    @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var UserName: UILabel!
     @IBOutlet weak var DeviceLabel: UILabel!
     
     let db = Firestore.firestore()
@@ -29,14 +27,14 @@ class HistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        title = "History"
+        title = "Me"
         tableView.dataSource = self
         tableView.delegate = self
         
-        UserName.text = userName
-        profilePicture.image = userProfile
-        profilePicture.layer.masksToBounds = true
-        profilePicture.layer.cornerRadius = profilePicture.frame.width/2.0
+//        UserName.text = userName
+//        profilePicture.image = userProfile
+//        profilePicture.layer.masksToBounds = true
+//        profilePicture.layer.cornerRadius = profilePicture.frame.width/2.0
         
         loadHistory()
     }
@@ -45,6 +43,8 @@ class HistoryViewController: UIViewController {
         blemanager.startScanning()
         DispatchQueue.main.async {
             self.DeviceLabel.text = self.blemanager.connectedText
+//            self.DeviceLabel.sizeToFit()
+            self.DeviceLabel.adjustsFontSizeToFitWidth = true
             print("\(self.blemanager.connectedText)")
         }
     }
@@ -54,6 +54,7 @@ class HistoryViewController: UIViewController {
 //        navigationItem.backBarButtonItem?.tintColor = UIColor.white
 
         navigationController?.navigationBar.tintColor = UIColor.white
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
