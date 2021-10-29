@@ -21,6 +21,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var DeviceLabel: UILabel!
     
+  
     let db = Firestore.firestore()
     
     var historyText: [History] = []

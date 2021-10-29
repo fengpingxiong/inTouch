@@ -48,8 +48,8 @@ class FriendViewController: UIViewController{
         super.viewDidLoad()
         title = otherUserName
         friendBackGroundImage = uploadProfileImage()
-        friendBackGroundImage.layer.masksToBounds = true
-        friendBackGroundImage.layer.cornerRadius = friendBackGroundImage.frame.width/2.0
+//        friendBackGroundImage.layer.masksToBounds = true
+//        friendBackGroundImage.layer.cornerRadius = friendBackGroundImage.frame.width/2.0
 //        vibrationChioces.isHidden = true
 //        vibrationChiocesRed.isHidden = true
 //        vibrationChiocesPurple.isHidden = true
