@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "start button.png",
+      "filename" : "Intersection 3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "start button@2x.png",
+      "filename" : "Intersection 3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "start button@3x.png",
+      "filename" : "Intersection 3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

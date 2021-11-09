@@ -19,7 +19,8 @@ class HistoryViewController: UIViewController {
     private var messageContentArray = [String]()
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var DeviceLabel: UILabel!
+    @IBOutlet weak var DeviceButton: UIButton!
+    @IBOutlet weak var IDTextField: UITextField!
     
   
     let db = Firestore.firestore()
@@ -32,6 +33,8 @@ class HistoryViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        DeviceButton.titleEdgeInsets = UIEdgeInsets(top: -10.0, left: 0.0, bottom: 0.0, right: 0.0)
+        
 //        UserName.text = userName
 //        profilePicture.image = userProfile
 //        profilePicture.layer.masksToBounds = true
@@ -43,10 +46,13 @@ class HistoryViewController: UIViewController {
     @IBAction func DeviceButton(_ sender: UIButton) {
         blemanager.startScanning()
         DispatchQueue.main.async {
-            self.DeviceLabel.text = self.blemanager.connectedText
+//            self.DeviceLabel.text = self.blemanager.connectedText
+//            self.DeviceLabel.adjustsFontSizeToFitWidth = true
 //            self.DeviceLabel.sizeToFit()
-            self.DeviceLabel.adjustsFontSizeToFitWidth = true
-            print("\(self.blemanager.connectedText)")
+
+
+            self.DeviceButton.setTitle("\(self.blemanager.connectedText)", for: UIControl.State.normal)
+//            print("\(self.blemanager.connectedText)")
         }
     }
 
@@ -100,15 +106,21 @@ class HistoryViewController: UIViewController {
                         DispatchQueue.main.async {
                             
                             if findSenderEmail == authEmail {
-                                let tableViewSentText = History(historyEmotion: "You sent to ", historyType: "\(receiverName ?? "0@gmail.com") \(emotion)", historyTime: timeData ?? "0")
+                                let tableViewSentText = History(historyEmotion: "Sent to ", historyType: "\(receiverName ?? "0@gmail.com") \(emotion)", historyTime: timeData ?? "0")
                                 self.historyText.append(tableViewSentText)
                                 self.messageContentArray.append("0")
                             }
                             if findReceiverEmail == safeReceiverEmail {
-                                let tableViewReceiveText = History(historyEmotion: "You received ", historyType: "\(emotion) from \(userName ?? "")", historyTime: timeData ?? "0")
+                                if userName == " " {
+                                    let tableViewReceiveText = History(historyEmotion: "Received ", historyType: "\(emotion) ", historyTime: timeData ?? "0")
+                                    self.historyText.append(tableViewReceiveText)
+                                    self.messageContentArray.append(messageContent)
+                                }
+                                else {
+                                    let tableViewReceiveText = History(historyEmotion: "Received ", historyType: "\(emotion) from \(userName ?? "")", historyTime: timeData ?? "0")
                                 self.historyText.append(tableViewReceiveText)
                                 self.messageContentArray.append(messageContent)
-                                
+                                }
                                 
                             }
                             self.tableView.reloadData()
@@ -158,13 +170,14 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
         let itemColors = UIColor.orange
         let HistoryText = historyText[indexPath.row].historyEmotion
-        cell.textLabel?.text = HistoryText + historyText[indexPath.row].historyType + " " + historyText[indexPath.row].historyTime
-        if HistoryText == "You received " {
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 11.0)
+        cell.textLabel?.text = HistoryText + historyText[indexPath.row].historyType + "     " + historyText[indexPath.row].historyTime
+        if HistoryText == "Received " {
             cell.textLabel?.textColor = itemColors
         } else {
             cell.isUserInteractionEnabled = false
         }
-        cell.textLabel?.adjustsFontSizeToFitWidth = true
+//        cell.textLabel?.adjustsFontSizeToFitWidth = true
         return cell
     }
     
@@ -172,7 +185,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let HistoryText = historyText[indexPath.row].historyEmotion
 //        let PurpleColor = UIColor(red: 229, green: 226, blue: 246, alpha: 1)
-        if HistoryText == "You received " {
+        if HistoryText == "Received " {
 //            tableView.backgroundView?.backgroundColor = PurpleColor
             let rowNumber : Int = indexPath.row
             currentMessageContent  = "\(messageContentArray[rowNumber])"

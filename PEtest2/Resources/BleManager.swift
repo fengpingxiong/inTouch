@@ -11,13 +11,15 @@ import CoreBluetooth
 var manager:CBCentralManager?
 var myPeripheral:CBPeripheral?
 var myCharacteristic:CBCharacteristic?
-let serviceUUID = [CBUUID(string: "4fafc201-1fb5-459e-8fcc-c5c9c331914b"), CBUUID(string: "0ad9287e-58ef-412a-b3bd-89c40702d686"), CBUUID(string: "8d5b0ffb-b4ca-4edd-8871-d716db6d4f3a")]
+let serviceUUID = [CBUUID(string: "4fafc201-1fb5-459e-8fcc-c5c9c331914b"), CBUUID(string: "0ad9287e-58ef-412a-b3bd-89c40702d686"), CBUUID(string: "8d5b0ffb-b4ca-4edd-8871-d716db6d4f3a"), CBUUID(string: "19aff77b-a4e6-4a48-a9a7-5733117e5da5")]
 
 
 final class BleManager: NSObject, ObservableObject, CBCentralManagerDelegate {
 //    static let shared = BleManager()
     public var UserDeviceName = ""
     public var connectedText = ""
+//    public var ScanText = ""
+    
 
     struct DeviceInfo {
         let DeviceName: String
@@ -26,7 +28,7 @@ final class BleManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     }
     
     var UserDevice: [DeviceInfo] = [DeviceInfo(DeviceName: "myESP32", serviceUUID: "4fafc201-1fb5-459e-8fcc-c5c9c331914b", peripheralUUID: "5432A3E0-45C0-BA0D-B7C3-36D8225221FB"),
-                                    DeviceInfo(DeviceName: "myESP32-1", serviceUUID: "0ad9287e-58ef-412a-b3bd-89c40702d686", peripheralUUID: "2B64E68B-8817-F415-BD94-45DAB71D1598"), DeviceInfo(DeviceName: "myESP32-2", serviceUUID: "8d5b0ffb-b4ca-4edd-8871-d716db6d4f3a", peripheralUUID: "C18D98CE-2419-6FE0-A7D8-71A34EC30F78")
+                                    DeviceInfo(DeviceName: "myESP32-1", serviceUUID: "0ad9287e-58ef-412a-b3bd-89c40702d686", peripheralUUID: "2B64E68B-8817-F415-BD94-45DAB71D1598"), DeviceInfo(DeviceName: "myESP32-2", serviceUUID: "8d5b0ffb-b4ca-4edd-8871-d716db6d4f3a", peripheralUUID: "C18D98CE-2419-6FE0-A7D8-71A34EC30F78"), DeviceInfo(DeviceName: "myESP32-3", serviceUUID: "19aff77b-a4e6-4a48-a9a7-5733117e5da5", peripheralUUID: "E913A16B-F6C5-B3F4-B6FA-57728A5366CA")
 
     ]
     
@@ -41,6 +43,7 @@ final class BleManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     func startScanning() {
         manager?.stopScan()
         manager?.scanForPeripherals(withServices: serviceUUID, options: nil)
+//        ScanText = "Scanning"
 //        print("scanned")
     }
     
@@ -87,34 +90,35 @@ final class BleManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         peripheral.discoverServices(serviceUUID)
-        connectedText = "\(UserDeviceName) has connected"
+        connectedText = "Connected"
+//        connectedText = "\(UserDeviceName) has connected"
         print("Connected to " +  peripheral.name!)
 //        print("text:\(UserDeviceName)")
        }
     
-    public func centralManager(_ central: CBCentralManager, willRestoreState dict: [String : Any]) {
-//        LocalNotification.shared.showNotification(id: "willrestorestate", title: "Manager will restore state", body: "", timeInterval: 1.0)
-            
-//        let systemSoundID: SystemSoundID = 1321
-//        AudioServicesPlaySystemSound (systemSoundID)
-
-        if let peripherals = dict[CBCentralManagerRestoredStatePeripheralsKey] as? [CBPeripheral] {
-            peripherals.forEach { (awakedPeripheral) in
-                print(". - Awaked peripheral \(String(describing: awakedPeripheral.name))")
-                guard let localName = awakedPeripheral.name,
-                localName == UserDeviceName else {
-                    return
-                }
-                
-                myPeripheral = awakedPeripheral
-            }
-        }
-    }
+//    public func centralManager(_ central: CBCentralManager, willRestoreState dict: [String : Any]) {
+////        LocalNotification.shared.showNotification(id: "willrestorestate", title: "Manager will restore state", body: "", timeInterval: 1.0)
+//
+////        let systemSoundID: SystemSoundID = 1321
+////        AudioServicesPlaySystemSound (systemSoundID)
+//
+//        if let peripherals = dict[CBCentralManagerRestoredStatePeripheralsKey] as? [CBPeripheral] {
+//            peripherals.forEach { (awakedPeripheral) in
+//                print(". - Awaked peripheral \(String(describing: awakedPeripheral.name))")
+//                guard let localName = awakedPeripheral.name,
+//                localName == UserDeviceName else {
+//                    return
+//                }
+//
+//                myPeripheral = awakedPeripheral
+//            }
+//        }
+//    }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         print("Disconnected from " +  peripheral.name!)
-//        myPeripheral = nil
-//        myCharacteristic = nil
+        myPeripheral = nil
+        myCharacteristic = nil
 //        myPeripheral = peripheral
 //        myCharacteristic = service.characteristics
         }

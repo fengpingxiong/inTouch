@@ -15,6 +15,7 @@ import CoreBluetooth
 //let serviceUUID = CBUUID(string: "0ad9287e-58ef-412a-b3bd-89c40702d686")
 //let peripheralUUID = CBUUID(string: "2B64E68B-8817-F415-BD94-45DAB71D1598")
 
+@available(iOS 13.0, *)
 class PairStartViewController: UIViewController {
     
     var bleManager = BleManager()

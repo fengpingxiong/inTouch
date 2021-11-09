@@ -21,10 +21,17 @@ class FriendViewController: UIViewController{
     private var toneArray = [UIImage]()
     
     
+//    public static let dateFormatter: DateFormatter = {
+//        let formattre = DateFormatter()
+//        formattre.dateStyle = .medium
+//        formattre.timeStyle = .long
+//        formattre.locale = .current
+//        return formattre
+//    }()
+    
     public static let dateFormatter: DateFormatter = {
         let formattre = DateFormatter()
-        formattre.dateStyle = .medium
-        formattre.timeStyle = .long
+        formattre.dateFormat = "MM/dd/yy HH:mm"
         formattre.locale = .current
         return formattre
     }()
@@ -42,12 +49,14 @@ class FriendViewController: UIViewController{
     @IBOutlet weak var yellowButton: UIButton!
     @IBOutlet weak var redButton: UIButton!
     @IBOutlet weak var purpleButton: UIButton!
+    @IBOutlet weak var AnonymousCheckBox: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = otherUserName
         friendBackGroundImage = uploadProfileImage()
+        AnonymousCheckBox.isHidden = true
 //        friendBackGroundImage.layer.masksToBounds = true
 //        friendBackGroundImage.layer.cornerRadius = friendBackGroundImage.frame.width/2.0
 //        vibrationChioces.isHidden = true
@@ -57,6 +66,7 @@ class FriendViewController: UIViewController{
         
         
     }
+
     
     func uploadProfileImage() -> UIImageView? {
 //        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
@@ -201,6 +211,7 @@ class FriendViewController: UIViewController{
                 tone6.frame.size = size
                 tone6.image = toneArray[5]
                 messageContent = messageContent + "," + "11"
+                Emotion = "inTouch"
                 yellowButton.isHidden = true
                 redButton.isHidden = true
                 purpleButton.isHidden = true
@@ -210,6 +221,7 @@ class FriendViewController: UIViewController{
                 tone6.frame.size = size
                 tone6.image = toneArray[5]
                 messageContent = messageContent + "," + "22"
+                Emotion = "inTouch"
                 yellowButton.isHidden = true
                 redButton.isHidden = true
                 purpleButton.isHidden = true
@@ -219,6 +231,7 @@ class FriendViewController: UIViewController{
                 tone6.frame.size = size
                 tone6.image = toneArray[5]
                 messageContent = messageContent + "," + "33"
+                Emotion = "inTouch"
                 yellowButton.isHidden = true
                 redButton.isHidden = true
                 purpleButton.isHidden = true
@@ -322,9 +335,34 @@ class FriendViewController: UIViewController{
         
     }
     
+    @IBAction func anonymous(_ sender: UIButton) {
+        otherUserName = "0"
+        AnonymousCheckBox.isHidden = false
+    }
     
     @IBAction func sendTouchtapped(_ sender: UIButton) {
-        if otherUserName != "" {
+        if otherUserName == "0" {
+            let dateString = Self.dateFormatter.string(from: Date())
+            if let NameEmail = Auth.auth().currentUser?.email {
+                db.collection("messageSend").addDocument(data: ["receiverEmail":otherUserEmail,
+                     "senderEmail":NameEmail,
+                     "messageContent":messageContent,
+                     "Emotion" : Emotion,
+                     "receiverName": otherUserName,
+                     "userName": " ",
+                     "DateTime":dateString]) { (error) in
+                    if let e = error {
+                        print("There was an issue saving data to firestore, \(e)")
+                    } else {
+                        print("Successfully saved data.")
+                        self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
+                        self.AnonymousCheckBox.isHidden = true
+                        self.otherUserName = ""
+                    }
+                }
+            }
+        }
+        if otherUserName != "0" {
 //            messageContent = "11"
             let dateString = Self.dateFormatter.string(from: Date())
             if let NameEmail = Auth.auth().currentUser?.email {
@@ -346,5 +384,4 @@ class FriendViewController: UIViewController{
         }
         else {return}
     }
-        
 }
