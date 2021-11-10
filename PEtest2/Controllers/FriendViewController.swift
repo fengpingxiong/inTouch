@@ -19,6 +19,7 @@ class FriendViewController: UIViewController{
     private var count: Int = 0
     private var countDown: Int = 6
     private var toneArray = [UIImage]()
+    private var Anonymous: String = ""
     
     
 //    public static let dateFormatter: DateFormatter = {
@@ -37,6 +38,7 @@ class FriendViewController: UIViewController{
     }()
     
     let db = Firestore.firestore()
+   
     
    
     @IBOutlet weak var friendBackGroundImage: UIImageView!
@@ -50,6 +52,7 @@ class FriendViewController: UIViewController{
     @IBOutlet weak var redButton: UIButton!
     @IBOutlet weak var purpleButton: UIButton!
     @IBOutlet weak var AnonymousCheckBox: UIImageView!
+    @IBOutlet weak var box: UIImageView!
     
     
     override func viewDidLoad() {
@@ -63,7 +66,6 @@ class FriendViewController: UIViewController{
 //        vibrationChiocesRed.isHidden = true
 //        vibrationChiocesPurple.isHidden = true
 //        countDownLabel.text = "\(countDown)"
-        
         
     }
 
@@ -335,53 +337,74 @@ class FriendViewController: UIViewController{
         
     }
     
-    @IBAction func anonymous(_ sender: UIButton) {
-        otherUserName = "0"
-        AnonymousCheckBox.isHidden = false
+    var isChecked = false
+
+    @IBAction func TapBoxGesture(_ sender: UITapGestureRecognizer) {
+//        AnonymousCheckBox.isHidden = false
+        self.isChecked = !isChecked
+        AnonymousCheckBox.isHidden = !isChecked
+        checkIfBoxBeSelected()
     }
     
+    func checkIfBoxBeSelected() {
+        print("runCheck")
+        if AnonymousCheckBox.isHidden == false {
+            self.Anonymous = "yes"
+        }
+        if AnonymousCheckBox.isHidden == true {
+            self.Anonymous = ""
+        }
+    }
+    
+     
     @IBAction func sendTouchtapped(_ sender: UIButton) {
-        if otherUserName == "0" {
-            let dateString = Self.dateFormatter.string(from: Date())
-            if let NameEmail = Auth.auth().currentUser?.email {
-                db.collection("messageSend").addDocument(data: ["receiverEmail":otherUserEmail,
-                     "senderEmail":NameEmail,
-                     "messageContent":messageContent,
-                     "Emotion" : Emotion,
-                     "receiverName": otherUserName,
-                     "userName": " ",
-                     "DateTime":dateString]) { (error) in
-                    if let e = error {
-                        print("There was an issue saving data to firestore, \(e)")
-                    } else {
-                        print("Successfully saved data.")
-                        self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
-                        self.AnonymousCheckBox.isHidden = true
-                        self.otherUserName = ""
+        if Emotion != "" {
+            if Anonymous == "yes" {
+                let dateString = Self.dateFormatter.string(from: Date())
+                if let NameEmail = Auth.auth().currentUser?.email {
+                    db.collection("messageSend").addDocument(data: ["receiverEmail":otherUserEmail,
+                         "senderEmail":NameEmail,
+                         "messageContent":messageContent,
+                         "Emotion" : Emotion,
+                         "receiverName": otherUserName,
+                         "userName": " ",
+                         "DateTime":dateString]) { (error) in
+                        if let e = error {
+                            print("There was an issue saving data to firestore, \(e)")
+                        } else {
+                            print("Successfully saved data.")
+                            self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
+                            self.AnonymousCheckBox.isHidden = true
+                            self.Anonymous = ""
+//                            self.box.isHidden = false
+//                            self.otherUserName = ""
+                        }
                     }
                 }
             }
-        }
-        if otherUserName != "0" {
-//            messageContent = "11"
-            let dateString = Self.dateFormatter.string(from: Date())
-            if let NameEmail = Auth.auth().currentUser?.email {
-                db.collection("messageSend").addDocument(data: ["receiverEmail":otherUserEmail,
-                     "senderEmail":NameEmail,
-                     "messageContent":messageContent,
-                     "Emotion" : Emotion,
-                     "receiverName": otherUserName,
-                     "userName": userName1,
-                     "DateTime":dateString]) { (error) in
-                    if let e = error {
-                        print("There was an issue saving data to firestore, \(e)")
-                    } else {
-                        print("Successfully saved data.")
-                        self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
+            if Anonymous == "" {
+    //            messageContent = "11"
+                let dateString = Self.dateFormatter.string(from: Date())
+                if let NameEmail = Auth.auth().currentUser?.email {
+                    db.collection("messageSend").addDocument(data: ["receiverEmail":otherUserEmail,
+                         "senderEmail":NameEmail,
+                         "messageContent":messageContent,
+                         "Emotion" : Emotion,
+                         "receiverName": otherUserName,
+                         "userName": userName1,
+                         "DateTime":dateString]) { (error) in
+                        if let e = error {
+                            print("There was an issue saving data to firestore, \(e)")
+                        } else {
+                            print("Successfully saved data.")
+                            self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
+                        }
                     }
                 }
             }
+            else {return}
+            
         }
-        else {return}
+        
     }
 }

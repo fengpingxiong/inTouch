@@ -1006,14 +1006,20 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                         <state key="normal" title="Anonymously send">
-                                            <color key="titleColor" red="0.74445968870000001" green="0.25172060730000001" blue="0.67061752080000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="anonymous:" destination="FQ1-0B-m5m" eventType="touchUpInside" id="J4i-jP-Wn0"/>
-                                        </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pkN-IW-bqW">
+                                        <rect key="frame" x="254" y="57" width="30" height="27.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.74445968870000001" green="0.25172060730000001" blue="0.67061752080000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fbA-1D-Ru4" appends="YES" id="GZN-Yh-Fbf"/>
+                                        </connections>
+                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ouo-NY-bcr">
-                                        <rect key="frame" x="264" y="62" width="20" height="17.5"/>
+                                        <rect key="frame" x="254" y="57" width="30" height="27.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.74445968870000001" green="0.25172060730000001" blue="0.67061752080000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
@@ -1100,6 +1106,7 @@
                     <navigationItem key="navigationItem" id="l9e-z0-Kji"/>
                     <connections>
                         <outlet property="AnonymousCheckBox" destination="ouo-NY-bcr" id="SwF-Gc-vk7"/>
+                        <outlet property="box" destination="pkN-IW-bqW" id="G1k-vi-bMc"/>
                         <outlet property="friendBackGroundImage" destination="UjS-rr-vMd" id="hcV-6j-6bx"/>
                         <outlet property="purpleButton" destination="sX4-c2-lzy" id="BAr-8y-c09"/>
                         <outlet property="redButton" destination="IfD-4V-dNJ" id="Tjg-Tb-2Rf"/>
@@ -1114,6 +1121,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0B-ux-nMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fbA-1D-Ru4">
+                    <connections>
+                        <action selector="TapBoxGesture:" destination="FQ1-0B-m5m" id="iO8-nK-0T9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4288.8000000000002" y="1383.9580209895053"/>
         </scene>
@@ -1463,6 +1475,7 @@
         <image name="sadEmoji" width="364" height="360"/>
         <image name="signUp-profile" width="140" height="153"/>
         <image name="signup-signup" width="122" height="45"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <image name="star-mid" width="87" height="87"/>
         <image name="start-smaller" width="66" height="66"/>
         <image name="vibrationChioces" width="48" height="48"/>
