@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "HBTY.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Birthday.png",
+      "filename" : "HBTY@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "HBTY@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

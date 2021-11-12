@@ -53,20 +53,22 @@ class FriendViewController: UIViewController{
     @IBOutlet weak var purpleButton: UIButton!
     @IBOutlet weak var AnonymousCheckBox: UIImageView!
     @IBOutlet weak var box: UIImageView!
-    
+    @IBOutlet weak var ScrollView: UIScrollView!
+    @IBOutlet weak var TapBackgroundShowSendView: UITapGestureRecognizer!
+    @IBOutlet weak var sendView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = otherUserName
         friendBackGroundImage = uploadProfileImage()
         AnonymousCheckBox.isHidden = true
-//        friendBackGroundImage.layer.masksToBounds = true
-//        friendBackGroundImage.layer.cornerRadius = friendBackGroundImage.frame.width/2.0
+        ScrollView.layer.masksToBounds = true
+        ScrollView.layer.cornerRadius = ScrollView.frame.width/6.0
 //        vibrationChioces.isHidden = true
 //        vibrationChiocesRed.isHidden = true
 //        vibrationChiocesPurple.isHidden = true
 //        countDownLabel.text = "\(countDown)"
-        
+        sendView.isHidden = true
     }
 
     
@@ -249,18 +251,18 @@ class FriendViewController: UIViewController{
         messageContent = "66"
         Emotion = "Calm"
     }
-    @IBAction func SadEmoji(_ sender: UIButton) {
-        messageContent = "77"
-        Emotion = "Sad"
-    }
+//    @IBAction func SadEmoji(_ sender: UIButton) {
+//        messageContent = "77"
+//        Emotion = "Sad"
+//    }
     @IBAction func excitement(_ sender: UIButton) {
         messageContent = "44"
         Emotion = "Excited"
     } 
-    @IBAction func AngerEmoji(_ sender: UIButton) {
-        messageContent = "88"
-        Emotion = "Angry"
-    }
+//    @IBAction func AngerEmoji(_ sender: UIButton) {
+//        messageContent = "88"
+//        Emotion = "Angry"
+//    }
     @IBAction func Birthday(_ sender: UIButton) {
         messageContent = "99"
         Emotion = "HBDTY"
@@ -345,6 +347,14 @@ class FriendViewController: UIViewController{
         AnonymousCheckBox.isHidden = !isChecked
         checkIfBoxBeSelected()
     }
+    
+    @IBAction func tapBackgroundShowSendView(_ sender: UITapGestureRecognizer) {
+        self.isChecked = !isChecked
+        sendView.isHidden = !isChecked
+//        checkIfSendViewHidden()
+    }
+    
+    
     
     func checkIfBoxBeSelected() {
         print("runCheck")
