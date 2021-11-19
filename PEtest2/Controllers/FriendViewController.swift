@@ -56,6 +56,8 @@ class FriendViewController: UIViewController{
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var TapBackgroundShowSendView: UITapGestureRecognizer!
     @IBOutlet weak var sendView: UIView!
+    @IBOutlet weak var SuccessfullySent: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +71,9 @@ class FriendViewController: UIViewController{
 //        vibrationChiocesPurple.isHidden = true
 //        countDownLabel.text = "\(countDown)"
         sendView.isHidden = true
+        SuccessfullySent.layer.masksToBounds = true
+        SuccessfullySent.layer.cornerRadius = SuccessfullySent.frame.width/8.0
+        SuccessfullySent.isHidden = true
     }
 
     
@@ -365,8 +370,11 @@ class FriendViewController: UIViewController{
             self.Anonymous = ""
         }
     }
+    func backToNormal() {
+        self.SuccessfullySent.isHidden = true
+        self.SuccessfullySent.alpha = 1
+    }
     
-     
     @IBAction func sendTouchtapped(_ sender: UIButton) {
         if Emotion != "" {
             if Anonymous == "yes" {
@@ -383,11 +391,18 @@ class FriendViewController: UIViewController{
                             print("There was an issue saving data to firestore, \(e)")
                         } else {
                             print("Successfully saved data.")
-                            self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
+//                            self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
                             self.AnonymousCheckBox.isHidden = true
                             self.Anonymous = ""
+                            if self.SuccessfullySent.alpha == 0 {
+                                self.SuccessfullySent.alpha = 1
+                            }
+                            self.SuccessfullySent.isHidden = false
+                            UIView.animate(withDuration: 2.0, animations: { () -> Void in
+                            self.SuccessfullySent.alpha = 0
 //                            self.box.isHidden = false
 //                            self.otherUserName = ""
+                            })
                         }
                     }
                 }
@@ -407,7 +422,15 @@ class FriendViewController: UIViewController{
                             print("There was an issue saving data to firestore, \(e)")
                         } else {
                             print("Successfully saved data.")
-                            self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
+                            if self.SuccessfullySent.alpha == 0 {
+                                self.SuccessfullySent.alpha = 1
+                            }
+                            self.SuccessfullySent.isHidden = false
+                            UIView.animate(withDuration: 2.0, animations: { () -> Void in
+                                self.SuccessfullySent.alpha = 0
+//                                self.backToNormal()
+                            })
+//                            self.performSegue(withIdentifier: "goToSuccessSent", sender: self)
                         }
                     }
                 }

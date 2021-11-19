@@ -1118,15 +1118,47 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="friend-barimage" translatesAutoresizingMaskIntoConstraints="NO" id="Wc0-A8-FbQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="friend-barimage" translatesAutoresizingMaskIntoConstraints="NO" id="Wc0-A8-FbQ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-3y-zDg">
+                                <rect key="frame" x="70" y="249" width="235" height="57.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VMf-48-FZD">
+                                        <rect key="frame" x="19" y="9.5" width="40" height="39"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="successfully sent!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKg-VS-yX2">
+                                        <rect key="frame" x="67" y="19.5" width="148" height="20.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.74445968870000001" green="0.25172060730000001" blue="0.67061752080000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="AKg-VS-yX2" firstAttribute="leading" secondItem="VMf-48-FZD" secondAttribute="trailing" constant="12" id="3aH-N0-3NJ"/>
+                                    <constraint firstItem="VMf-48-FZD" firstAttribute="top" secondItem="2ac-3y-zDg" secondAttribute="top" constant="13" id="5jc-Q1-QOX"/>
+                                    <constraint firstItem="VMf-48-FZD" firstAttribute="leading" secondItem="2ac-3y-zDg" secondAttribute="leading" constant="20" id="PWJ-i9-v0s"/>
+                                    <constraint firstAttribute="bottom" secondItem="AKg-VS-yX2" secondAttribute="bottom" constant="20" id="fyy-kw-me5"/>
+                                    <constraint firstAttribute="bottom" secondItem="VMf-48-FZD" secondAttribute="bottom" constant="14" id="g1X-tn-ald"/>
+                                    <constraint firstItem="AKg-VS-yX2" firstAttribute="top" secondItem="2ac-3y-zDg" secondAttribute="top" constant="17" id="ofy-N9-IdF"/>
+                                    <constraint firstItem="AKg-VS-yX2" firstAttribute="leading" secondItem="VMf-48-FZD" secondAttribute="trailing" constant="12" id="r4w-ge-iwa"/>
+                                    <constraint firstAttribute="trailing" secondItem="AKg-VS-yX2" secondAttribute="trailing" constant="20" id="zER-Nf-Lae"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2e0-Qz-6Iu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Wc0-A8-FbQ" firstAttribute="top" secondItem="UjS-rr-vMd" secondAttribute="top" id="54I-S9-Eam"/>
                             <constraint firstItem="UjS-rr-vMd" firstAttribute="bottom" secondItem="2e0-Qz-6Iu" secondAttribute="bottom" id="5uH-wC-mAy"/>
+                            <constraint firstItem="2ac-3y-zDg" firstAttribute="top" secondItem="d20-GJ-Li7" secondAttribute="top" constant="249" id="83E-md-SGF"/>
+                            <constraint firstItem="2ac-3y-zDg" firstAttribute="leading" secondItem="2e0-Qz-6Iu" secondAttribute="leading" constant="70" id="8Ls-6T-bjW"/>
+                            <constraint firstItem="2ac-3y-zDg" firstAttribute="centerX" secondItem="Wc0-A8-FbQ" secondAttribute="centerX" id="DDM-c1-JJc"/>
+                            <constraint firstItem="2ac-3y-zDg" firstAttribute="centerX" secondItem="UjS-rr-vMd" secondAttribute="centerX" id="Lzm-cV-uJn"/>
                             <constraint firstItem="UjS-rr-vMd" firstAttribute="trailing" secondItem="2e0-Qz-6Iu" secondAttribute="trailing" id="RMH-X2-tPs"/>
                             <constraint firstItem="UjS-rr-vMd" firstAttribute="top" secondItem="d20-GJ-Li7" secondAttribute="top" constant="20" id="gul-At-MfQ"/>
                             <constraint firstItem="UjS-rr-vMd" firstAttribute="leading" secondItem="2e0-Qz-6Iu" secondAttribute="leading" id="jZ5-yw-oQW"/>
@@ -1136,6 +1168,7 @@
                     <connections>
                         <outlet property="AnonymousCheckBox" destination="ouo-NY-bcr" id="SwF-Gc-vk7"/>
                         <outlet property="ScrollView" destination="9eV-tb-Ttl" id="QqL-vN-WTi"/>
+                        <outlet property="SuccessfullySent" destination="2ac-3y-zDg" id="ako-xZ-WS2"/>
                         <outlet property="TapBackgroundShowSendView" destination="FKh-1F-8Rk" id="Crh-BU-emY"/>
                         <outlet property="box" destination="pkN-IW-bqW" id="G1k-vi-bMc"/>
                         <outlet property="friendBackGroundImage" destination="UjS-rr-vMd" id="hcV-6j-6bx"/>
@@ -1149,7 +1182,6 @@
                         <outlet property="tone5" destination="04a-2h-X43" id="H8Z-IM-i8W"/>
                         <outlet property="tone6" destination="kef-sS-eRB" id="Dze-ec-z7u"/>
                         <outlet property="yellowButton" destination="DNd-S6-Hyv" id="dL2-5G-bQI"/>
-                        <segue destination="eDr-Wn-6Sc" kind="show" identifier="goToSuccessSent" id="vPc-w9-vaW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0B-ux-nMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1419,13 +1451,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPo-UU-QIi">
-                                <rect key="frame" x="70" y="249" width="234" height="75"/>
+                                <rect key="frame" x="70" y="205" width="234" height="119"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="MarkCheck" translatesAutoresizingMaskIntoConstraints="NO" id="Of7-qb-zpH">
-                                        <rect key="frame" x="20" y="13" width="45" height="48"/>
+                                        <rect key="frame" x="20" y="13" width="45" height="92"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="successfully sent!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Daa-oF-qiO">
-                                        <rect key="frame" x="77" y="17" width="137" height="38"/>
+                                        <rect key="frame" x="77" y="17" width="137" height="82"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1486,6 +1518,7 @@
         <image name="box" width="21" height="21"/>
         <image name="button background" width="188.5" height="188.5"/>
         <image name="calmEmoji" width="40" height="40"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="clear.fill" catalog="system" width="128" height="114"/>
         <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
