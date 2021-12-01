@@ -109,6 +109,24 @@ class HomeViewController: UIViewController,UITextFieldDelegate {
         showFriendsNameandProfile()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        navigationItem.backBarButtonItem?.tintColor = UIColor.white
+
+        navigationController?.navigationBar.tintColor = hexStringToUIColor(hex: "#EB9D1E", Alpha:1.0)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Restore the navigation bar to default
+        navigationController?.navigationBar.tintColor = hexStringToUIColor(hex: "#000000", Alpha:1.0)
+//        EB9D1E
+//        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+//        navigationController?.navigationBar.shadowImage = nil
+    }
+    
     
     func showUserName() {
         guard let email = Auth.auth().currentUser?.email else { return }
@@ -369,6 +387,28 @@ class HomeViewController: UIViewController,UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    func hexStringToUIColor (hex:String, Alpha:Float) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(Alpha)
+        )
     }
 
 }

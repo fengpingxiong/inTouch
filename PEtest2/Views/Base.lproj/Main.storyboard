@@ -454,8 +454,8 @@
                                                 <rect key="frame" x="6.2497636540156236" y="96" width="100.00000000000045" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-i2-pWT">
-                                                        <rect key="frame" x="20" y="5" width="60" height="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-i2-pWT">
+                                                        <rect key="frame" x="19.486045482672125" y="5" width="60" height="15"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
@@ -1115,6 +1115,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.74445968870000001" green="0.25172060730000001" blue="0.67061752080000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe up see more!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaM-bc-cHJ">
+                                        <rect key="frame" x="68" y="15" width="114" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <color key="textColor" red="0.23137254900000001" green="0.1764705882" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1149,6 +1156,14 @@
                                     <constraint firstAttribute="trailing" secondItem="AKg-VS-yX2" secondAttribute="trailing" constant="20" id="zER-Nf-Lae"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap the photo to show the inTouch board" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pad-nU-6DG">
+                                <rect key="frame" x="39" y="68" width="296" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.74445968870000001" green="0.25172060730000001" blue="0.67061752080000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2e0-Qz-6Iu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1170,6 +1185,7 @@
                         <outlet property="ScrollView" destination="9eV-tb-Ttl" id="QqL-vN-WTi"/>
                         <outlet property="SuccessfullySent" destination="2ac-3y-zDg" id="ako-xZ-WS2"/>
                         <outlet property="TapBackgroundShowSendView" destination="FKh-1F-8Rk" id="Crh-BU-emY"/>
+                        <outlet property="TapImage" destination="pad-nU-6DG" id="yLS-Je-H0R"/>
                         <outlet property="box" destination="pkN-IW-bqW" id="G1k-vi-bMc"/>
                         <outlet property="friendBackGroundImage" destination="UjS-rr-vMd" id="hcV-6j-6bx"/>
                         <outlet property="purpleButton" destination="sX4-c2-lzy" id="BAr-8y-c09"/>
@@ -1293,16 +1309,6 @@
                                     <outletCollection property="gestureRecognizers" destination="7oN-PB-APP" appends="YES" id="dWx-DJ-y3j"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-QX-dCw">
-                                <rect key="frame" x="118" y="158" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.89803921568627454" green="0.88627450980392153" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <gestureRecognizers/>
-                                <imageReference key="image" image="signUp-profile" symbolScale="small"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="KHM-gF-t83" appends="YES" id="o0J-ox-KjT"/>
-                                </connections>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pkm-um-xWK" customClass="successfulNotificationView">
                                 <rect key="frame" x="52" y="265" width="267" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1392,6 +1398,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="signup-signup" translatesAutoresizingMaskIntoConstraints="NO" id="GJJ-Fs-PFa">
                                 <rect key="frame" x="102" y="97" width="161" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-QX-dCw">
+                                <rect key="frame" x="124" y="156" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.89803921568627454" green="0.88627450980392153" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <imageReference key="image" image="signUp-profile" symbolScale="small"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KHM-gF-t83" appends="YES" id="o0J-ox-KjT"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LXy-NN-UDz"/>

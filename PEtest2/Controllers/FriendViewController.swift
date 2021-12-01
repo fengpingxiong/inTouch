@@ -57,6 +57,7 @@ class FriendViewController: UIViewController{
     @IBOutlet weak var TapBackgroundShowSendView: UITapGestureRecognizer!
     @IBOutlet weak var sendView: UIView!
     @IBOutlet weak var SuccessfullySent: UIView!
+    @IBOutlet weak var TapImage: UILabel!
     
     
     override func viewDidLoad() {
@@ -74,6 +75,10 @@ class FriendViewController: UIViewController{
         SuccessfullySent.layer.masksToBounds = true
         SuccessfullySent.layer.cornerRadius = SuccessfullySent.frame.width/8.0
         SuccessfullySent.isHidden = true
+        TapImage.isHidden = false
+        UIView.animate(withDuration: 8.0, animations: { () -> Void in
+            self.TapImage.alpha = 0
+        })
     }
 
     
@@ -219,7 +224,7 @@ class FriendViewController: UIViewController{
                 let size = CGSize(width: 20, height: 20)
                 tone6.frame.size = size
                 tone6.image = toneArray[5]
-                messageContent = messageContent + "," + "11"
+                messageContent = messageContent + "," + "11" + "," + "88"
                 Emotion = "inTouch"
                 yellowButton.isHidden = true
                 redButton.isHidden = true
@@ -229,7 +234,7 @@ class FriendViewController: UIViewController{
                 let size = CGSize(width: 25, height: 25)
                 tone6.frame.size = size
                 tone6.image = toneArray[5]
-                messageContent = messageContent + "," + "22"
+                messageContent = messageContent + "," + "22" + "," + "88"
                 Emotion = "inTouch"
                 yellowButton.isHidden = true
                 redButton.isHidden = true
@@ -239,7 +244,7 @@ class FriendViewController: UIViewController{
                 let size = CGSize(width: 30, height: 30)
                 tone6.frame.size = size
                 tone6.image = toneArray[5]
-                messageContent = messageContent + "," + "33"
+                messageContent = messageContent + "," + "33" + "," + "88"
                 Emotion = "inTouch"
                 yellowButton.isHidden = true
                 redButton.isHidden = true
@@ -249,11 +254,11 @@ class FriendViewController: UIViewController{
     }
     
     @IBAction func HappyEmoji(_ sender: UIButton) {
-        messageContent = "55"
+        messageContent = "55" + "," + "88"
         Emotion = "Happy"
     }
     @IBAction func CalmEmoji(_ sender: UIButton) {
-        messageContent = "66"
+        messageContent = "66" + "," + "88"
         Emotion = "Calm"
     }
 //    @IBAction func SadEmoji(_ sender: UIButton) {
@@ -261,7 +266,7 @@ class FriendViewController: UIViewController{
 //        Emotion = "Sad"
 //    }
     @IBAction func excitement(_ sender: UIButton) {
-        messageContent = "44"
+        messageContent = "44" + "," + "88"
         Emotion = "Excited"
     } 
 //    @IBAction func AngerEmoji(_ sender: UIButton) {
@@ -269,11 +274,11 @@ class FriendViewController: UIViewController{
 //        Emotion = "Angry"
 //    }
     @IBAction func Birthday(_ sender: UIButton) {
-        messageContent = "99"
+        messageContent = "99" + "," + "88"
         Emotion = "HBDTY"
     }
     @IBAction func Yearning(_ sender: UIButton) {
-        messageContent = "00"
+        messageContent = "00" + "," + "88"
         Emotion = "Heart"
     }
     

@@ -20,7 +20,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordField.delegate = self
 //        self.navigationController?.isNavigationBarHidden = true
 //        title = "inTouch"
-        navigationController?.navigationBar.tintColor = hexStringToUIColor(hex: "#EB9D1E", Alpha:1.0)
+        navigationController?.navigationBar.tintColor = hexStringToUIColor(hex: "#000000", Alpha:1.0)
+//        #EB9D1E
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true

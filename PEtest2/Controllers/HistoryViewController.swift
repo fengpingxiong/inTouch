@@ -17,6 +17,7 @@ class HistoryViewController: UIViewController {
     public var userProfile = UIImage(named: "Image")
     var currentMessageContent = ""
     private var messageContentArray = [String]()
+    private var notificationText = ""
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var DeviceButton: UIButton!
@@ -34,6 +35,7 @@ class HistoryViewController: UIViewController {
         tableView.delegate = self
         
         DeviceButton.titleEdgeInsets = UIEdgeInsets(top: -10.0, left: 0.0, bottom: 0.0, right: 0.0)
+        IDTextField.isHidden = true
         
 //        UserName.text = userName
 //        profilePicture.image = userProfile
@@ -69,6 +71,7 @@ class HistoryViewController: UIViewController {
 
         // Restore the navigation bar to default
         navigationController?.navigationBar.tintColor = hexStringToUIColor(hex: "#EB9D1E", Alpha:1.0)
+//        EB9D1E
 //        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
 //        navigationController?.navigationBar.shadowImage = nil
     }
