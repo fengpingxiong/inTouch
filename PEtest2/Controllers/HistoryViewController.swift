@@ -173,7 +173,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
         let itemColors = UIColor.orange
         let HistoryText = historyText[indexPath.row].historyEmotion
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 11.0)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 15.0)
         cell.textLabel?.text = HistoryText + historyText[indexPath.row].historyType + "     " + historyText[indexPath.row].historyTime
         if HistoryText == "Received " {
             cell.textLabel?.textColor = itemColors

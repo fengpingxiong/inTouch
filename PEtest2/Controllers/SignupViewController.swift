@@ -10,8 +10,8 @@ import Firebase
 
 class SignupViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var checkMarkButton: UIButton!
     
-    @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var successfullyNotification: UILabel!
     
     @IBOutlet weak var signUpLogo: UIImageView!
@@ -31,8 +31,8 @@ class SignupViewController: UIViewController,UITextFieldDelegate {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         accountNameTextField.delegate = self
-        checkMark.isHidden = true
         successfullyNotification.isHidden = true
+        checkMarkButton.isHidden = true
 
     }
     
@@ -105,14 +105,18 @@ class SignupViewController: UIViewController,UITextFieldDelegate {
                 self.emailTextField.isHidden = true
                 self.passwordTextField.isHidden = true
                 self.profileImage.isHidden = true
-                self.checkMark.isHidden = false
+//                self.checkMark.isHidden = false
                 self.successfullyNotification.isHidden = false
+                self.checkMarkButton.isHidden = false
             }
 
             }
         
     }
 
+    @IBAction func checkMark(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToLogin", sender: self)
+    }
     
     @IBAction func profileTapped(_ sender: UITapGestureRecognizer) {
         presentPhotoActionSheet()

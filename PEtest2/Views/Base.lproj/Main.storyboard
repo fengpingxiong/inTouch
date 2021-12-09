@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7sT-8a-fJr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7sT-8a-fJr">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,18 +15,18 @@
             <objects>
                 <viewController title="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="PEtest2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="redraw" image="welcome-background" translatesAutoresizingMaskIntoConstraints="NO" id="7lI-fl-EDs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-44" width="375" height="691"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3YX-XX-oze" appends="YES" id="aLS-6J-wFS"/>
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LrI-wd-cuq">
-                                <rect key="frame" x="59" y="139" width="257" height="439"/>
+                                <rect key="frame" x="59" y="95" width="257" height="507"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjT-Si-Vbh" userLabel="titleLoginView">
                                         <rect key="frame" x="58" y="0.0" width="141" height="118"/>
@@ -65,7 +65,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGY-2L-T0W" userLabel="buttonmView">
-                                        <rect key="frame" x="21" y="264" width="215" height="175"/>
+                                        <rect key="frame" x="21" y="264" width="215" height="243"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY4-gC-odn">
                                                 <rect key="frame" x="64" y="24" width="86" height="86"/>
@@ -122,11 +122,11 @@
             <objects>
                 <viewController id="Cv5-vA-oVC" customClass="HomeViewController" customModule="PEtest2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mq1-gD-kSF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="welcome-background" translatesAutoresizingMaskIntoConstraints="NO" id="bTN-qQ-A1B">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <gestureRecognizers/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 <connections>
@@ -140,7 +140,7 @@
                                 <color key="separatorColor" red="0.842921806" green="0.84261431220000005" blue="0.91493214320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReusableCellHome" rowHeight="35" id="osK-Pv-L4L">
-                                        <rect key="frame" x="0.0" y="24.5" width="194" height="35"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="194" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="osK-Pv-L4L" id="bKm-ws-opW">
                                             <rect key="frame" x="0.0" y="0.0" width="194" height="35"/>
@@ -675,27 +675,27 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5134" y="2165"/>
+            <point key="canvasLocation" x="3494" y="2154"/>
         </scene>
         <!--Pair Start View Controller-->
         <scene sceneID="zqp-qz-yCZ">
             <objects>
                 <viewController id="Z4M-zL-6nG" customClass="PairStartViewController" customModule="PEtest2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="udu-KF-7kc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="welcome-background" translatesAutoresizingMaskIntoConstraints="NO" id="AFs-V4-WAy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1, Make your haptic device Power on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYg-yz-jok">
-                                <rect key="frame" x="77" y="143" width="234.5" height="17"/>
+                                <rect key="frame" x="77" y="99" width="234.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-kn-dwQ" userLabel="GoButtonView">
-                                <rect key="frame" x="80" y="178" width="252" height="179"/>
+                                <rect key="frame" x="80" y="134" width="252" height="203"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2, Tap Go button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrh-2S-0gl">
                                         <rect key="frame" x="0.0" y="79" width="108" height="17"/>
@@ -721,7 +721,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3, Wait please" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cco-cI-r04">
-                                <rect key="frame" x="80" y="373" width="100" height="17"/>
+                                <rect key="frame" x="80" y="353" width="100" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -735,7 +735,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-a3-VD4" userLabel="AllDoneView">
-                                <rect key="frame" x="115" y="469" width="145" height="40.5"/>
+                                <rect key="frame" x="115" y="449" width="145" height="40.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All done!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ee-K4-pAG">
                                         <rect key="frame" x="77.5" y="10" width="66.5" height="20.5"/>
@@ -855,7 +855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlX-bW-3qR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5890" y="2165"/>
+            <point key="canvasLocation" x="4289" y="2154"/>
         </scene>
         <!--Pair Done View Controller-->
         <scene sceneID="fnR-9N-SnS">
@@ -904,18 +904,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R21-1E-AGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6750" y="2165"/>
+            <point key="canvasLocation" x="5150" y="2154"/>
         </scene>
         <!--Friend View Controller-->
         <scene sceneID="B27-ih-Dq2">
             <objects>
                 <viewController id="FQ1-0B-m5m" customClass="FriendViewController" customModule="PEtest2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d20-GJ-Li7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="welcome-background" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-rr-vMd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="FKh-1F-8Rk" appends="YES" id="yop-hK-KZ8"/>
@@ -956,7 +956,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="242" height="70"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAH-ya-PsZ">
-                                                                <rect key="frame" x="22" y="6" width="35" height="35"/>
+                                                                <rect key="frame" x="8" y="8" width="40" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" backgroundImage="Heart"/>
                                                                 <connections>
@@ -964,7 +964,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-LX-tJv">
-                                                                <rect key="frame" x="62" y="12" width="35" height="35"/>
+                                                                <rect key="frame" x="56" y="12" width="40" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" backgroundImage="HappyEmoji"/>
                                                                 <connections>
@@ -972,7 +972,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55S-fw-Gx2">
-                                                                <rect key="frame" x="104" y="19" width="35" height="35"/>
+                                                                <rect key="frame" x="104" y="19" width="40" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" backgroundImage="calmEmoji"/>
                                                                 <connections>
@@ -980,7 +980,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ct-AA-lFE">
-                                                                <rect key="frame" x="145" y="26" width="35" height="35"/>
+                                                                <rect key="frame" x="153" y="26" width="40" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" backgroundImage="Excitement"/>
                                                                 <connections>
@@ -988,7 +988,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bow-Vq-9vN">
-                                                                <rect key="frame" x="186" y="34" width="35" height="35"/>
+                                                                <rect key="frame" x="202" y="30" width="40" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" backgroundImage="Birthday"/>
                                                                 <connections>
@@ -1115,8 +1115,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.74445968870000001" green="0.25172060730000001" blue="0.67061752080000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe up see more!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaM-bc-cHJ">
-                                        <rect key="frame" x="68" y="15" width="114" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe up below to see more!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaM-bc-cHJ">
+                                        <rect key="frame" x="50" y="15" width="167" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" red="0.23137254900000001" green="0.1764705882" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1219,11 +1219,11 @@
             <objects>
                 <viewController id="pfQ-1s-Syz" customClass="HistoryViewController" customModule="PEtest2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeK-oa-0WL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="welcome-background" translatesAutoresizingMaskIntoConstraints="NO" id="5vL-lE-oFC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="history-bar" translatesAutoresizingMaskIntoConstraints="NO" id="rXz-6l-Szd">
                                 <rect key="frame" x="-97" y="-98" width="532" height="367"/>
@@ -1234,7 +1234,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Kc-hK-Fg1">
-                                <rect key="frame" x="16" y="277" width="343" height="371"/>
+                                <rect key="frame" x="16" y="257" width="343" height="371"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="371" id="Qh6-dN-ZPx"/>
@@ -1242,7 +1242,7 @@
                                 <color key="separatorColor" red="0.8986654878" green="0.88514262440000002" blue="0.96471613649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ReusableCell" id="aX0-1A-OSs">
-                                        <rect key="frame" x="0.0" y="24.5" width="343" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="343" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aX0-1A-OSs" id="FnJ-d0-6Dy">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
@@ -1255,7 +1255,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMK-Ao-tng">
                                 <rect key="frame" x="107" y="104" width="161" height="165"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
                                 <state key="normal" title="Device" backgroundImage="button background">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1299,11 +1299,11 @@
             <objects>
                 <viewController id="Igx-cG-Xsq" customClass="SignupViewController" customModule="PEtest2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GKz-yK-QkF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="redraw" image="welcome-background" translatesAutoresizingMaskIntoConstraints="NO" id="PDv-cc-vry">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-44" width="375" height="691"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="7oN-PB-APP" appends="YES" id="dWx-DJ-y3j"/>
@@ -1320,10 +1320,16 @@
                                         <color key="textColor" red="0.23137254901960785" green="0.1764705882352941" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="MarkCheck" translatesAutoresizingMaskIntoConstraints="NO" id="AgU-Ug-8cb">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1w-ON-DmC">
+                                        <rect key="frame" x="8" y="-3" width="55" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="MarkCheck"/>
+                                        <connections>
+                                            <action selector="checkMark:" destination="Igx-cG-Xsq" eventType="touchUpInside" id="Bwl-6f-eEk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1422,7 +1428,7 @@
                     <navigationItem key="navigationItem" id="4oE-0G-8e0"/>
                     <connections>
                         <outlet property="accountNameTextField" destination="IMk-hY-CQN" id="cIj-5b-jff"/>
-                        <outlet property="checkMark" destination="AgU-Ug-8cb" id="SfH-1A-NUw"/>
+                        <outlet property="checkMarkButton" destination="n1w-ON-DmC" id="vy9-1p-SHF"/>
                         <outlet property="emailTextField" destination="e5a-5A-BG2" id="6Sx-Fm-Fte"/>
                         <outlet property="passwordTextField" destination="Lka-Rm-X94" id="gpU-Oc-QYb"/>
                         <outlet property="profileImage" destination="cQS-QX-dCw" id="THt-KI-HNp"/>
@@ -1430,6 +1436,7 @@
                         <outlet property="signUpButton" destination="Hrc-EZ-msB" id="PFs-he-ehz"/>
                         <outlet property="signUpLogo" destination="GJJ-Fs-PFa" id="GOM-r3-3eQ"/>
                         <outlet property="successfullyNotification" destination="L6H-XX-VRA" id="9nQ-As-XjU"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToLogin" id="97P-fo-phS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMK-i3-FXw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1504,7 +1511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EP4-N3-0YX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4289" y="2165"/>
+            <point key="canvasLocation" x="6100" y="2154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KM5-WG-h4i">
@@ -1525,6 +1532,9 @@
             <point key="canvasLocation" x="2901.5999999999999" y="218.1409295352324"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="97P-fo-phS"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Birthday" width="40" height="40"/>
         <image name="Excitement" width="40" height="40"/>
